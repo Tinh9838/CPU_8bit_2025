@@ -1,9 +1,9 @@
-//       + module này dùng lệnh case chọn cách thực hiện phép tính giữa 2 toán tử operrand a và operrand b
+//       + module này  hiện phép tính giữa 2 toán tử operrand a và operrand b
 //
 //
-//    
+//      + luồng : a + b + mã lệnh -> case chọn phép tính -> kết quả
 //
-//
+//  
 //
 //       
 // 
