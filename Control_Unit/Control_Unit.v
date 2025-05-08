@@ -1,23 +1,15 @@
-+-----------------+
-|  Control Unit   |
-|                 |
-| Inputs:         |
-| clk    ------>  | 
-| rst    ------>  | 
-| opcode[3:0] --> | ----> alu_op[3:0] ----> [ALU]
-| zero_flag  -->  | ----> regfile_we -----> [Register File]
-| carry_flag -->  | ----> pc_en ----------> [Program Counter]
-| overflow_flag -> | ----> pc_load --------> [Program Counter]
-|                 | ----> ir_load --------> [Instruction Register]
-|                 | ----> mem_we ---------> [RAM]
-|                 | ----> mem_re ---------> [RAM]
-|                 | ----> io_we ----------> [IO Module]
-|                 | ----> io_re ----------> [IO Module]
-|                 | ----> sel_mux_reg_wr[1:0] -> [MUX_REG_WR]
-|                 | ----> sel_mux_alu_a -----> [MUX_ALU_A]
-|                 | ----> sel_mux_alu_b -----> [MUX_ALU_B]
-+-----------------+
-//
+//                        |            | -> pc_en
+//                        |            | -> pc_load
+//     op_code ->         |            | 
+//                        |            | -> ir_load
+//                        |            |
+//                        |     CU     | -> refile_we
+//                        |            |
+//                        |            | -> alu_op
+//                        |            |
+//                        |            | -> mem_re
+//                        |            |
+//                        |____________| -> mem_we
 //
 //
 //
