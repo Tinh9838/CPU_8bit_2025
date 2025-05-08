@@ -1,7 +1,7 @@
 // + Tx và Rx
 //
-//
-//
+//      start-> |      | -> busy
+//   data_in -> | UART | -> tx
 //
 //
 //
