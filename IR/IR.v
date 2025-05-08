@@ -9,8 +9,8 @@
 //
 //
 //
-//
-//
+//  ir_load ->|  IR   | -> opcode
+//  ir_in   ->|_______| -> operand
 //
 //
 //
