@@ -8,10 +8,10 @@
 //           bus tín hiệu re + bus địa chỉ addr = đọc ram = data_out
 //
 //
-//
-//
-//
-//
+//       addr   -> |        |
+//       we     -> |  RAM   | ->data_out
+//       re     -> |        |
+//       data_in-> |________|
 //
 //
 //
