@@ -1,5 +1,5 @@
 //
-//  |      | 
+//  |      |                                       | +ISA  |
 //  | PC   | -> pc_out ---------------->   addr -> |  ROM  |-> instruction ->   ir_in     -> |  IR   | -> operan ->   rd_addr1 -> |         | -> rd_data1 -> operand_a -> | ALU  |-
 //  |      |                           ____________                                          |       |                rd_addr2 -> |         | -> rd_data2 -> operand_b -> |      |
 //  |      |                          |            | -> ir_load --------------> ir_load   -> |       |                            |         |                             |      |            
@@ -22,16 +22,17 @@
 //                                    |            |                       data_in-> |________|
 //                                    |            |
 //                                    |            |
-//                                    |            |                  addr    -> |       |  <--------------  tx_start   -> |      | 
+//                                    |            |                  addr    -> |       |
+//                                    |            |                             |       |
+//                                    |            |                  we      -> |       |  <--------------  tx_start   -> |      | 
 //                                    |            |      ------>     data_in -> | IO    | -> uart_tx_reg -> tx_data    -> |      | -> tx
-//                                    |            |                             |       |                    tx_busy   <- | UART |
-//                                    |            |                  we      -> |       |                                 |      | 
+//                                    |            |                             |       |                   tx_busy    <- | UART |
 //                                    |    CU      |                             |       |                                 |      | 
 //                                    |            |                             |       | -> led                          |      |
 //                                    |            |                             |       |                                 |      |
-//                                    |            |     <------     data_out <- |       |                                 |      |
+//                                    |            |                             |       |                                 |      |
 //                                    |            |                 re       -> |       |                                 |      |
-//                                    |            |                             |       | <- uart_rx <-------- rx_data <- |      | <- rx      
+//                                    |            |     <------     data_out <- |       | <- uart_rx <-------- rx_data <- |      | <- rx      
 //                                    |            |                             |       |   <---------------   rx_ready <-|______|
 //                                    |            |                             |       |
 //                                    |            |                             |_______| <- button       
