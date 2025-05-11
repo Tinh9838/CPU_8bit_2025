@@ -5,23 +5,28 @@
 //
 //                  + mỗi phép tính trên alu lấy 1 vd cụ thể
 //
-//| STT | Phép toán      | `alu_op` | `A (operand_a)` | `B (operand_b)` | Mục tiêu kiểm tra                                           |
-//| --- | -------------- | -------- | --------------- | --------------- | ----------------------------------------------------------- |
-//| 1   | ADD            | `0000`   | `0x05`          | `0x0A`          | Kiểm tra phép cộng cơ bản, không carry, không overflow      |
-//| 2   | ADD (carry)    | `0000`   | `0xFF`          | `0x01`          | Kiểm tra carry flag khi tổng vượt 8 bit                     |
-//| 3   | ADD (overflow) | `0000`   | `0x7F`          | `0x01`          | Kiểm tra overflow khi dương + dương → âm (signed overflow)  |
-//| 4   | SUB            | `0001`   | `0x0A`          | `0x05`          | Kiểm tra phép trừ cơ bản, không borrow, không overflow      |
-//| 5   | SUB (borrow)   | `0001`   | `0x05`          | `0x0A`          | Kiểm tra borrow (có thể kiểm tra carry hoặc bit mượn)       |
-//| 6   | SUB (overflow) | `0001`   | `0x80`          | `0x01`          | Kiểm tra overflow khi âm - dương → dương (signed overflow)  |
-//| 7   | AND            | `0010`   | `0x0F`          | `0x3C`          | Kiểm tra phép AND bitwise                                   |
-//| 8   | OR             | `0011`   | `0x0F`          | `0x3C`          | Kiểm tra phép OR bitwise                                    |
-//| 9   | XOR            | `0100`   | `0x0F`          | `0x3C`          | Kiểm tra phép XOR bitwise                                   |
-//| 10  | NOT            | `0101`   | `0x55`          | `0x00`          | Kiểm tra phép NOT (B không ảnh hưởng)                       |
-//| 11  | SHL            | `0110`   | `0x0A`          | `0x00`          | Kiểm tra dịch trái 1 bit                                    |
-//| 12  | SHR            | `0111`   | `0xA0`          | `0x00`          | Kiểm tra dịch phải 1 bit                                    |
-//| 13  | CMP (=)        | `1000`   | `0x12`          | `0x12`          | So sánh bằng nhau, kiểm tra zero flag                       |
-//| 14  | CMP (≠)        | `1000`   | `0x12`          | `0x34`          | So sánh khác nhau, kiểm tra zero flag = 0                   |
-//| 15  | Mặc định       | `1111`   | `0xAA`          | `0xBB`          | Kiểm tra xử lý opcode không xác định (default case của ALU) |
+//
+//
+//     | STT | Phép toán      | `alu_op` | `A (operand_a)` | `B (operand_b)` | Mục tiêu kiểm tra                                           |
+//     | --- | -------------- | -------- | --------------- | --------------- | ----------------------------------------------------------- |
+//     | 1   | ADD            | `0000`   | `0x05`          | `0x0A`          | Kiểm tra phép cộng cơ bản, không carry, không overflow      |
+//     | 2   | ADD (carry)    | `0000`   | `0xFF`          | `0x01`          | Kiểm tra carry flag khi tổng vượt 8 bit                     |
+//     | 3   | ADD (overflow) | `0000`   | `0x7F`          | `0x01`          | Kiểm tra overflow khi dương + dương → âm (signed overflow)  |
+//     | 4   | SUB            | `0001`   | `0x0A`          | `0x05`          | Kiểm tra phép trừ cơ bản, không borrow, không overflow      |
+//     | 5   | SUB (borrow)   | `0001`   | `0x05`          | `0x0A`          | Kiểm tra borrow (có thể kiểm tra carry hoặc bit mượn)       |
+//     | 6   | SUB (overflow) | `0001`   | `0x80`          | `0x01`          | Kiểm tra overflow khi âm - dương → dương (signed overflow)  |
+//     | 7   | AND            | `0010`   | `0x0F`          | `0x3C`          | Kiểm tra phép AND bitwise                                   |
+//     | 8   | OR             | `0011`   | `0x0F`          | `0x3C`          | Kiểm tra phép OR bitwise                                    |
+//     | 9   | XOR            | `0100`   | `0x0F`          | `0x3C`          | Kiểm tra phép XOR bitwise                                   |
+//     | 10  | NOT            | `0101`   | `0x55`          | `0x00`          | Kiểm tra phép NOT (B không ảnh hưởng)                       |
+//     | 11  | SHL            | `0110`   | `0x0A`          | `0x00`          | Kiểm tra dịch trái 1 bit                                    |
+//     | 12  | SHR            | `0111`   | `0xA0`          | `0x00`          | Kiểm tra dịch phải 1 bit                                    |
+//     | 13  | CMP (=)        | `1000`   | `0x12`          | `0x12`          | So sánh bằng nhau, kiểm tra zero flag                       |
+//     | 14  | CMP (≠)        | `1000`   | `0x12`          | `0x34`          | So sánh khác nhau, kiểm tra zero flag = 0                   |
+//     | 15  | Mặc định       | `1111`   | `0xAA`          | `0xBB`          | Kiểm tra xử lý opcode không xác định (default case của ALU) |
+//
+//
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 `timescale 1ns / 1ps
 
