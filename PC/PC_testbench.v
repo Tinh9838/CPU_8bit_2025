@@ -1,8 +1,8 @@
 // kịch bản   + khởi tạo module tb
 //            + tạo clk
 //            + tạo rst bỏ sau # 20
-//            + xét các tình huống 1 chỉ rst,2 chỉ pc_en,3 chỉ pc_load ,4 vừa pc_en và pc_load (kết quả vẫn ưu tiên load),5 tắt pc_load
-//
+//            + kích các 2 tín hiệu vào xem xét lệnh pc++ và nhảy có hoạt động đúng ko :
+//                                  tình huống 1 chỉ rst,2 chỉ pc_en,3 chỉ pc_load ,4 vừa pc_en và pc_load (kết quả vẫn ưu tiên load),5 tắt pc_load
 //
 //
 //      Time    Reset   PC_En  PC_Load PC_In  PC_Out
