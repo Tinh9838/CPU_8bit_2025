@@ -1,8 +1,27 @@
+//      3 bước  :   + khởi tạo module testbench
+//
+//                  + tạo bản sao alu 
+//
+//                  + mỗi phép tính trên alu lấy 1 vd cụ thể
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 `timescale 1ns / 1ps
 
-module alu_tb;
+module alu_tb;                                                                          // module testbench
 
-    // Signal khai báo cho module alu
     reg [3:0] alu_op_tb;
     reg [7:0] operand_a_tb;
     reg [7:0] operand_b_tb;
@@ -11,7 +30,7 @@ module alu_tb;
     wire carry_flag_tb;
     wire overflow_flag_tb;
 
-    // Khởi tạo instance của module alu
+                                                                                       // Khởi tạo instance của module alu        //dut (device under test)   // bản sao của alu
     alu dut (
         .alu_op(alu_op_tb),
         .operand_a(operand_a_tb),
@@ -22,7 +41,7 @@ module alu_tb;
         .overflow_flag(overflow_flag_tb)
     );
 
-    initial begin
+    initial begin                                                                      // mỗi phép toán lấy 1 vd, in ra màn hình sau mỗi ví dụ
         // In tiêu đề của bảng kết quả
         $display("Time\tALU Op\tA\tB\tResult\tZero\tCarry\tOverflow");
         $display("------------------------------------------------------------");
