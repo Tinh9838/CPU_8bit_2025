@@ -1,4 +1,4 @@
-//      
+//
 //   kịch bản   :   + khởi tạo module testbench
 //
 //                  + tạo bản sao alu 
@@ -22,19 +22,6 @@
 //| 13  | CMP (=)        | `1000`   | `0x12`          | `0x12`          | So sánh bằng nhau, kiểm tra zero flag                       |
 //| 14  | CMP (≠)        | `1000`   | `0x12`          | `0x34`          | So sánh khác nhau, kiểm tra zero flag = 0                   |
 //| 15  | Mặc định       | `1111`   | `0xAA`          | `0xBB`          | Kiểm tra xử lý opcode không xác định (default case của ALU) |
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 `timescale 1ns / 1ps
 
