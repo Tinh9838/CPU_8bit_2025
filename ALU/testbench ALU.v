@@ -1,4 +1,5 @@
-//      3 bước  :   + khởi tạo module testbench
+//      
+//   kịch bản   :   + khởi tạo module testbench
 //
 //                  + tạo bản sao alu 
 //
