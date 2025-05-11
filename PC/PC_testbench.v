@@ -1,11 +1,19 @@
+// kịch bản   + khởi tạo module tb
+//            + tạo clk
+//            + tạo rst bỏ sau # 20
+//            + xét các tình huống 1 chỉ rst,2 chỉ pc_en,3 chỉ pc_load ,4 vừa pc_en và pc_load (kết quả vẫn ưu tiên load),5 tắt pc_load
 //
 //
 //
-//
-//
-//
-//
-//
+//      Time    Reset   PC_En  PC_Load PC_In  PC_Out
+//     --------------------------------------------------
+//     20      1       0      0       00     00
+//     30      0       1      0       00     01
+//     40      0       1      0       00     02
+//     50      0       0      1       55     55
+//     60      0       1      0       AA     55
+//     70      0       1      0       00     56
+//     80      0       0      0       00     56
 //
 //
 //
