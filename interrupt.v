@@ -1,3 +1,23 @@
+// + luồng : irq_time | irq_uart_rx | irq_ext -> ir (báo ngắt)+ ir_vec(mã lệnh)
+//
+//
+//      irq_time     - > |           | -> ir
+//                       | interrupt | 
+//      irq_uart_rx  - > |           | -> ir_vec
+//                       |           |
+//      irq_ext      - > |__________ |
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // CODE CU
 //input wire        irq,
 //input wire [2:0]  irq_vec,
@@ -24,15 +44,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 module irq_controller(
-    input  wire irq_timer,
-    input  wire irq_uart_rx,
-    input  wire irq_ext,       // có thể là button hoặc cảm biến
+    input  wire irq_timer,               // ngắt khi tie tràn
+    input  wire irq_uart_rx,             // ngắt sau khi rx nhận xong 1 byte        
+    input  wire irq_ext,                 // ngắt từ ngoại vi
 
-    output reg  [2:0] irq_vec, // mã hóa ngắt (3 bit)
-    output reg        irq      // ngắt tổng
-);
+            output reg  [2:0] irq_vec,   // mã xác định ngắt từ đâu, làm gì 
+    output reg        irq                // ngắt , tạm dừng chương trình chính
+); 
     always @(*) begin
-        // Ưu tiên từ cao xuống thấp
+                // Ưu tiên từ cao xuống thấp
         if (irq_timer) begin
             irq_vec = 3'b001;
             irq     = 1;
