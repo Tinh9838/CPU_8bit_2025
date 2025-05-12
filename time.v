@@ -1,4 +1,4 @@
-// luồng 
+// luồng count ++ tới MAX_COUNT -> gửi time_out và báo ngắt irp
 //
 //
 //
