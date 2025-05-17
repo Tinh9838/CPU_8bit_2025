@@ -1,0 +1,15 @@
+MỤC TIÊU NGHIÊN CỨU: hình dung 1 con chip như 1 chủ thể vật lý,
+coi nó là đối tượng nghiên cứu để tìm ra các quy luật khai triển tổng quát toàn diện.
+
+
+các kết quả thể hiện trên mặt phẳng bằng chữ thể hiện tư duy hiện tại chưa phải tối ưu nhất,nhưng luôn chuyển động, cải tiến hướng tới sự tối ưu.
+
+A.trade off : hiệu suất - năng lượng - chi phí - độ tin cậy là mục tiêu cao nhất mọi bản thiết kế.
+  triển khai trên 3 tầng chính : RTL -gate - tran
+
+B.1 Coi tran phi vật lý ,triển khai : RTL - tầng này giống xây nhà cho tín hiệu .về bản chất là chạy 1 lệnh
+
+Đồ án hiện tại em đang triển khai ở mức này, các code dựng như mẫu nên để nghiên cứu kiến trúc SoC.các đánh giá được viết ở đầu code.
+Quá trình chính : PC chỉ lệnh -> rom (chứa lệnh) -> IR tách lệnh thành mã và data -> CU đọc mã thực thi lệnh (cụ thể hơn còn có IF trao đổi data với ALU,hay CU trao đổi data với RAM... )
+
+B.2 Thực tế thì 
