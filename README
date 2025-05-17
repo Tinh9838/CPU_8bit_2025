@@ -25,6 +25,7 @@ RTL  : thêm logic liên quan vật lý.
 gate : phân tích đường đi nối các gate.
 tran : xem xét tính vật lý các cell.
 
-C. HIỆN TẠI : Các code trên dùng để nghiên cứu , có để lại nhận xét cơ bản đầu mỗi code.
+C. HIỆN TẠI : Các code trên dùng để nghiên cứu , có để lại nhận xét đầu mỗi code.
+              Em đang dẫn team 5 làm Verilog 1 SoC.
 
 đang suy nghĩ cách thiết kế trade off ,các yếu tố vật lý cần thiết kế thêm logic như thế nào.
