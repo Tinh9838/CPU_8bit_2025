@@ -1,15 +1,27 @@
-MỤC TIÊU NGHIÊN CỨU: hình dung 1 con chip như 1 chủ thể vật lý,
-coi nó là đối tượng nghiên cứu để tìm ra các quy luật khai triển tổng quát toàn diện.
+MỤC TIÊU NGHIÊN CỨU: hình dung 1 con chip như 1 chủ thể vật lý sống,
+coi nó là đối tượng nghiên cứu để tìm ra các [ quy luật khai triển ] bao quát nhất có thể nghĩ ra.
 
 
 các kết quả thể hiện trên mặt phẳng bằng chữ thể hiện tư duy hiện tại chưa phải tối ưu nhất,nhưng luôn chuyển động, cải tiến hướng tới sự tối ưu.
 
 A.trade off : hiệu suất - năng lượng - chi phí - độ tin cậy là mục tiêu cao nhất mọi bản thiết kế.
-  triển khai trên 3 tầng chính : RTL -gate - tran
+  triển khai theo 3 tầng chính : RTL  
+                               - gate 
+                               - tran
 
-B.1 Coi tran phi vật lý ,triển khai : RTL - tầng này giống xây nhà cho tín hiệu .về bản chất là chạy 1 lệnh
+B.1 Coi tran phi vật lý ,triển khai : RTL - tầng này giống xây nhà cho tín hiệu .
 
-Đồ án hiện tại em đang triển khai ở mức này, các code dựng như mẫu nên để nghiên cứu kiến trúc SoC.các đánh giá được viết ở đầu code.
+                                      gate : ý tưởng từ mã RTL được chuyển thành logic gate qua đại số boole.
+
+                                      tran : các gate như AND ,OR ,NOT , XOR được xây dựng từ cmos
+
+B.2 Thực tế thì tran có tính vật lý , nó khiến cho bản thiết kế thuần logic bị bóp méo.Vậy nên các yêu cầu vật lý từ tran xẽ khiến thiết kế tại B.1 phải bổ sung.
+Trên chip dòng tín hiệu sẽ đi qua 1 đống tran,nên các tính chất vật lý sẽ phải xét đến là tính hao mòn ,rò rỉ ,quá tải... và năng lượng của dòng.
+  Dự đoán các phần xuất phát để triển khai toàn diện:
+
+RTL  : thêm logic liên quan vật lý.
+gate : phân tích đường đi nối các gate.
+tran : xem xét tính vật lý các cell.
+
+C.Đồ án hiện tại em đang triển khai ở mức RTL coi tran phi vật lý, các code dựng như mẫu nên để nghiên cứu kiến trúc SoC.Quá trình tư duy, nhận xét cơ bản được viết ở đầu mỗi code.
 Quá trình chính : PC chỉ lệnh -> rom (chứa lệnh) -> IR tách lệnh thành mã và data -> CU đọc mã thực thi lệnh (cụ thể hơn còn có IF trao đổi data với ALU,hay CU trao đổi data với RAM... )
-
-B.2 Thực tế thì 
