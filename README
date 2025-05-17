@@ -25,5 +25,5 @@ RTL  : thêm logic liên quan vật lý.
 gate : phân tích đường đi nối các gate.
 tran : xem xét tính vật lý các cell.
 
-C.HÌNH DUNG HIỆN TẠI : hình dung được triển khai  RTL của SoC trường hợp coi tran phi vật lý. tư duy cơ bản về code được viết đầu mỗi code.
-Đang suy nghĩ về trade off và các yếu tố vật lý khiến thiết kế phải có logic như thế nào.
+C.HÌNH DUNG HIỆN TẠI : Các code trên em dùng để nghiên cứu ,em có để lại nhận xét cơ bản đầu mỗi code.
+e đang dẫn team 5 thực hành tạo 1 SoC chạy lệnh Acsembly trên SoC .Đó là đồ án SEM 2 tháng sau.
