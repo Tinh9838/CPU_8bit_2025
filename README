@@ -1,10 +1,12 @@
 MỤC TIÊU NGHIÊN CỨU: hình dung 1 con chip như 1 chủ thể vật lý sống,
 coi nó là đối tượng nghiên cứu để tìm ra các [ quy luật khai triển ] bao quát nhất có thể nghĩ ra.
+các nội dung tìm hiểu học tập như đọc sách ,... nghiên cứu về sau xẽ đưa về con chip tưởng tượng này để củng cố và kiểm chứng khung này.
 
 
 các kết quả thể hiện trên mặt phẳng bằng chữ thể hiện tư duy hiện tại chưa phải tối ưu nhất,nhưng luôn chuyển động, cải tiến hướng tới sự tối ưu.
 
 A.trade off : hiệu suất - năng lượng - chi phí - độ tin cậy là mục tiêu cao nhất mọi bản thiết kế.
+
   triển khai theo 3 tầng chính : RTL  
                                - gate 
                                - tran
