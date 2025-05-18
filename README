@@ -29,6 +29,6 @@ Trên chip dòng tín hiệu sẽ đi qua 1 đống tran,nên các tính chất 
 
 
 C. HIỆN TẠI : Các code trên dùng để nghiên cứu , có để lại nhận xét đầu mỗi code.
-              Đang dẫn team 5 làm Verilog 1 SoC.
+              Đang dẫn team 5 làm đồ án Verilog 1 SoC.
 
 đang suy nghĩ cách triển khai thiết kế trade off ,các yếu tố vật lý cần thiết kế thêm logic như thế nào.
