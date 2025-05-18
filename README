@@ -7,23 +7,26 @@ các kết quả thể hiện trên mặt phẳng bằng chữ thể hiện tư 
 
 A.trade off : hiệu suất - năng lượng - chi phí - độ tin cậy là mục tiêu cao nhất mọi bản thiết kế.
 
-  triển khai theo 3 tầng chính : RTL  
-                               - gate 
-                               - tran
+  triển khai theo 3 tầng chính :      RTL  
+                                      gate 
+                                      tran
 
-B.1 Coi tran phi vật lý ,triển khai : RTL - tầng này giống xây nhà cho tín hiệu .
 
+B.1 Coi tran phi vật lý ,triển khai : 
+                                      RTL - tầng này giống xây nhà cho tín hiệu .
                                       gate : ý tưởng từ mã RTL được chuyển thành logic gate qua đại số boole.
-
                                       tran : các gate như AND ,OR ,NOT , XOR được xây dựng từ cmos
+
 
 B.2 Thực tế thì tran có tính vật lý , nó khiến cho bản thiết kế thuần logic bị bóp méo.Vậy nên các yêu cầu vật lý từ tran xẽ khiến thiết kế tại B.1 phải bổ sung.
 Trên chip dòng tín hiệu sẽ đi qua 1 đống tran,nên các tính chất vật lý sẽ phải xét đến là tính hao mòn ,rò rỉ ,quá tải... và năng lượng của dòng.
   Dự đoán các phần xuất phát để triển khai toàn diện:
 
-RTL  : thêm logic liên quan vật lý.
-gate : phân tích đường đi nối các gate.
-tran : xem xét tính vật lý các cell.
+
+                                      RTL  : thêm logic liên quan vật lý.
+                                      gate : phân tích đường đi nối các gate.
+                                      tran : xem xét tính vật lý các cell.
+
 
 C. HIỆN TẠI : Các code trên dùng để nghiên cứu , có để lại nhận xét đầu mỗi code.
               Đang dẫn team 5 làm Verilog 1 SoC.
