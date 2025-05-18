@@ -13,7 +13,7 @@ A.trade off : hiệu suất - năng lượng - chi phí - độ tin cậy là m�
 
 
 B.1 Coi tran phi vật lý ,triển khai : 
-                                      RTL - tầng này giống xây nhà cho tín hiệu .
+                                      RTL  : tầng này giống xây nhà cho tín hiệu .
                                       gate : ý tưởng từ mã RTL được chuyển thành logic gate qua đại số boole.
                                       tran : các gate như AND ,OR ,NOT , XOR được xây dựng từ cmos
 
